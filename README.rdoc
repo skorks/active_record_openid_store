@@ -40,10 +40,10 @@ Let's say you're using omniauth[https://github.com/intridea/omniauth] and you're
 
 In your <tt>config/initializers/omniauth.rb</tt>:
 
-<tt>
-Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :openid, ActiveRecordOpenidStore::ActiveRecordStore.new, :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
-end
-</tt>
+
+  Rails.application.config.middleware.use OmniAuth::Builder do
+    provider :openid, ActiveRecordOpenidStore::ActiveRecordStore.new, :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
+  end
+
 
 Having done this, if you go to +/google/auth+ (as per how omniauth works) you will find that your associations and nonces are being stored in the database. Sweet!
