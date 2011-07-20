@@ -8,7 +8,7 @@ This directory contains a plugin for connecting your OpenID enabled rails app to
 
 Just add it as a gem in your Gemfile
 
-+gem 'active_record_openid_store'+
+<tt>gem 'active_record_openid_store'<tt>
 
 You will now have access to a rails generator to create the necessary migrations. Simply run:
 
