@@ -2,13 +2,13 @@
 
 A store is required by an OpenID server and optionally by the consumer to store associations, nonces, and auth key information across requests and processes.  If rails is distributed across several machines, they must must all have access to the same OpenID store data, so the FilesystemStore won't do. 
 
-This directory contains a plugin for connecting your OpenID enabled rails app to an ActiveRecord based OpenID store. *The code here is copied from the {openid-ruby library}[https://github.com/openid/ruby-openid] examples (https://github.com/openid/ruby-openid/tree/master/examples/active_record_openid_store)*. All I did was move some things around, add a namespace and package it all up as a rails engine/plugin, with some conveniences, for use with Rails 3.
+This directory contains a plugin for connecting your OpenID enabled rails app to an ActiveRecord based OpenID store. <b>The code here is copied from the {openid-ruby library}[https://github.com/openid/ruby-openid] examples (https://github.com/openid/ruby-openid/tree/master/examples/active_record_openid_store)</b>. All I did was move some things around, add a namespace and package it all up as a rails engine/plugin, with some conveniences, for use with Rails 3.
 
 ==Usage
 
 Just add it as a gem in your Gemfile
 
-<tt>gem 'active_record_openid_store'<tt>
+<tt>gem 'active_record_openid_store'</tt>
 
 You will now have access to a rails generator to create the necessary migrations. Simply run:
 
