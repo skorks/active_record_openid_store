@@ -12,36 +12,38 @@ Just add it as a gem in your Gemfile
 
 You will now have access to a rails generator to create the necessary migrations. Simply run:
 
-+rails g active_record_openid_store+
+<tt>rails g active_record_openid_store</tt>
 
 Now that we have the migration we can create the necessary tables:
 
-+rake db:migrate+
+<tt>rake db:migrate</tt>
 
 You should now have two extra tables, +open_id_associations+ and +open_id_nonces+.
 
 At this stage you're essentially good to go, you can create a new store like this:
 
-<tt>ActiveRecordOpenidStore::ActiveRecordStore.new<tt>
+<tt>ActiveRecordOpenidStore::ActiveRecordStore.new</tt>
 
 You can do this anywhere in your Rails app.
 
 ==What about garbage collection? 
 
-Adding the +active_record_openid_store+ gem to your Gemfile also gives you access to the +openid:gc+ rake task. You may use this task at any time to clean up any expired nonces and associations.
+Adding the +active_record_openid_store+ gem to your Gemfile also gives you access to the <tt>openid:gc</tt> rake task. You may use this task at any time to clean up any expired nonces and associations.
 
-+rake openid:gc+
+<tt>rake openid:gc</tt>
 
-This task isn't doing anything fancy under the hood, it simply calls the cleanup method of the active record store (i.e.: +ActiveRecordOpenidStore::ActiveRecordStore.new.cleanup+)
+This task isn't doing anything fancy under the hood, it simply calls the cleanup method of the active record store (i.e.: <tt>ActiveRecordOpenidStore::ActiveRecordStore.new.cleanup</tt>)
 
 ==Example With Omniauth
 
 Let's say you're using omniauth[https://github.com/intridea/omniauth] and you're also using Google OpenID to authenticate your users. You want to configure Google OpenID to use the ActiveRecord OpenID store. Given that you've followed the instructions above to add the gem and create the tables, you would configure Google OpenID like this.
 
-In your +config/initializers/omniauth.rb+:
+In your <tt>config/initializers/omniauth.rb</tt>:
 
+<tt>
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :openid, ActiveRecordOpenidStore::ActiveRecordStore.new, :name => 'google', :identifier => 'https://www.google.com/accounts/o8/id'
 end
+</tt>
 
 Having done this, if you go to +/google/auth+ (as per how omniauth works) you will find that your associations and nonces are being stored in the database. Sweet!
