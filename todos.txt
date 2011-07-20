@@ -1,0 +1,5 @@
+- make sure the store can be easily used outside of rails (e.g. try it out with sinatra)
+- do some rake tasks to create the database tables and stuff when using active record outside of rails (e.g. with sinatra)
+- make sure that requiring the active_record_openid_store outside or rails works properly
+- add some specs
+- fix up some of the code (after specs have been added)

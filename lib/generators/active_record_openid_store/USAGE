@@ -1,0 +1,6 @@
+Description:
+  Creates the two tables that are needed for an ActiveRecord based OpenID
+  store. The tables are open_id_associations, and open_id_nonces.
+
+Example:
+  rails g active_record_openid_store
