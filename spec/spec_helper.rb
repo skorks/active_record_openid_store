@@ -1,5 +1,12 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
+begin
+  require 'rubygems'
+rescue LoadError
+  nil
+end
+require 'bundler'
+Bundler.setup
 require 'rspec'
 require 'active_record_openid_store'
 
