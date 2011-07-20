@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = ActiveRecordOpenidStore::VERSION
   s.authors     = ["Alan Skorkin"]
   s.email       = ["alan@skorks.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/skorks/active_record_openid_store"
   s.summary     = %q{An Active Record-based OpenID store}
   s.description = %q{A store is required by an OpenID server and optionally by the consumer to store associations, nonces, and auth key information across requests and processes. If rails is distributed across several machines, they must must all have access to the same OpenID store data, so the FilesystemStore won't do. The code here is copied from the openid-ruby library examples. All I did was move some things around, add a namespace and package it all up as a rails engine/plugin, with some conveniences, for use with Rails 3.}
 
