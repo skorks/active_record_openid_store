@@ -22,7 +22,7 @@ You should now have two extra tables, +open_id_associations+ and +open_id_nonces
 
 At this stage you're essentially good to go, you can create a new store like this:
 
-+ActiveRecordOpenidStore::ActiveRecordStore.new+
+<tt>ActiveRecordOpenidStore::ActiveRecordStore.new<tt>
 
 You can do this anywhere in your Rails app.
 
