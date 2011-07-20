@@ -46,4 +46,4 @@ In your <tt>config/initializers/omniauth.rb</tt>:
   end
 
 
-Having done this, if you go to +/google/auth+ (as per how omniauth works) you will find that your associations and nonces are being stored in the database. Sweet!
+Having done this, if you go to +/auth/google+ (as per how omniauth works) you will find that your associations and nonces are being stored in the database. Sweet!
