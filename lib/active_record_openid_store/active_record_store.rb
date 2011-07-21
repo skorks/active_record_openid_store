@@ -1,5 +1,6 @@
 require 'openid'
 require 'openid/store/interface'
+require 'active_record'
 require 'active_record_openid_store/association'
 require 'active_record_openid_store/nonce'
 

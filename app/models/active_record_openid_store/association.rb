@@ -1,5 +1,6 @@
 require 'openid/association'
 require 'time'
+require 'active_record'
 
 class ActiveRecordOpenidStore::Association < ActiveRecord::Base
   set_table_name 'open_id_associations'

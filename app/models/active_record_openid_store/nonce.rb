@@ -1,3 +1,5 @@
+require 'active_record'
+
 class ActiveRecordOpenidStore::Nonce < ActiveRecord::Base
   set_table_name 'open_id_nonces'
 end
