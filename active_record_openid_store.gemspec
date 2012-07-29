@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "active_record_openid_store"
 
   s.add_dependency 'ruby-openid', '~> 2.1.0'
-  s.add_dependency 'activerecord', '~> 3.0.0'
+  s.add_dependency 'activerecord', '> 3.0.0'
 
   s.add_development_dependency  'rake'
   s.add_development_dependency  'rspec', '~> 2.5.0'
