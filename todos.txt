@@ -1,5 +1,7 @@
-- make sure the store can be easily used outside of rails (e.g. try it out with sinatra)
-- do some rake tasks to create the database tables and stuff when using active record outside of rails (e.g. with sinatra)
-- make sure that requiring the active_record_openid_store outside or rails works properly
-- add some specs
-- fix up some of the code (after specs have been added)
+- for rails example get the auth hash outputting on a page instead of on the console
+- get some specs going
+- make sure store can be used outside of rails
+- create an example of store usage with sinatra and sequel
+- how to create database tables when not using with rails
+- how to get rid of warnings such as 'WARNING: making https request to https://www.google.com/accounts/o8/id?id=AItOawl3JMDve4ABAKo3xUqvs8FF9YdG_8PaxC4 without verifying server certificate; no CA path was specified'
+- fix up some of the code after we have some specs
